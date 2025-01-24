@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<body style="font-weight:bold;text-align:center;">
+<p id="d"></p>
+<p id="demo"></p>
+<script>
+const a=[];
+var n=parseInt(prompt("Enter range of array"));
+for (let i=0;i<n;i++) {
+  a[i]=parseInt(prompt("Enter element "+(i + 1)));
+}
+document.getElementById("d").innerHTML ="Before Sorting "+a;
+var len=a.length;
+for (var i = 0; i <len- 1;i++) {
+  for (var j=0;j<len-1;j++) {
+    if (a[j]>a[j+1]) {
+      var temp=a[j];
+      a[j]= a[j+1];
+      a[j+1]=temp;
+    }
+  }
+}
+
+document.getElementById("demo").innerHTML ="After Sorting "+a;
+</script>
+</body>
+</html>
